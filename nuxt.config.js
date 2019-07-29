@@ -43,6 +43,7 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    'nuxt-sweetalert2'
   ],
   /*
   ** Axios module configuration

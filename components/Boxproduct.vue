@@ -27,7 +27,7 @@ export default {
             type: String,
         },
         price:{
-            type: String,
+            type: Number,
         }
     }
 }

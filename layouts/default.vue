@@ -7,6 +7,7 @@
       <nav class="my-2 my-md-0 mr-md-3">
         <nuxt-link to="/" class="p-2 text-dark">Home</nuxt-link>
         <nuxt-link to="/blog" class="p-2 text-dark">Blog</nuxt-link>
+        <nuxt-link to="/member" class="p-2 text-dark">Member</nuxt-link>
         <nuxt-link to="/authen" class="p-2 text-dark">Login</nuxt-link>
       </nav>
       <nuxt-link to="/authen/regiter" class="btn btn-outline-primary">Sign up</nuxt-link>

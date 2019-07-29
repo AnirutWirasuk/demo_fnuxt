@@ -32,6 +32,7 @@
 
           <hr class="mb-4" />
           <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+          <button class="btn btn-primary btn-lg btn-block" type="button" @click="btnCancel()">Cancel</button>
         </form>
       </div>
     </div>
@@ -58,10 +59,26 @@ export default {
           )
           .then(data => {
             console.log(data);
+            this.$swal.fire({
+              position: 'top-end',
+              type: 'success',
+              title: 'Your work has been saved',
+              showConfirmButton: false,
+              timer: 1500
+            })
             // vuexContext.commit("addPost", { ...createdPost, id: data.name });
             this.$router.push("/authen");
           })
           .catch(e => console.log(e));
+    },
+    btnCancel(){
+      this.$swal.fire({
+        position: 'top-end',
+        type: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1500
+      })
     }
   }
 }
