@@ -1,53 +1,43 @@
 <template>
   <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        demo_fnuxt
-      </h1>
-      <h2 class="subtitle">
-        My riveting Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+    <div class="card-deck mb-3 text-center">
+      <Boxproduct 
+      v-for="product in listproduct" 
+      :key="product.id"
+      :name="product.name"
+      :price="product.price"
+       />
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Boxproduct from '~/components/Boxproduct.vue'
 
 export default {
   components: {
-    Logo
+    Boxproduct
+  },
+  data() {
+    return {
+      listproduct: [
+        {
+          id: 1,
+          name: 'test product',
+          price: 200
+        },
+        {
+          id: 2,
+          name: 'test product',
+          price: 300
+        }
+      ]
+    }
   }
 }
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
